@@ -1,0 +1,17 @@
+#
+# ~/.zshrc.mine
+#
+
+case $TERM in
+    xterm*)
+        chpwd() {
+            ls -GAF
+        }
+
+        precmd() {
+            print -Pn "\e]0;%n@%M: %~\a"
+        }
+        ;;
+esac
+
+
