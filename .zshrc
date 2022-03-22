@@ -55,5 +55,5 @@ PROMPT="${USER_NAME}${ATMARK}${HOSTS}${KORON}${DIR}${PIPE}${NEWLINE}${USER_PROMP
 
 [ -f ${HOME}/.zshrc.mine ] && source ${HOME}/.zshrc.mine
 
-lsb_release -s -d
+cat /etc/os-release | head -n 1 | sed 's/^.*"\(.*\)".*$/\1/'
 zsh --version
